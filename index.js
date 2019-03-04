@@ -14,8 +14,8 @@ function nowServing(katzDeliLine) {
   }
 }
 
-function currentLine(line) {
-  if (line.length === 0) {
+function currentLine(katzDeliLine) {
+  if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   }
 
@@ -23,5 +23,5 @@ function currentLine(line) {
   for (var i = 0; i < katzDeliLine.length; i++) {
     customerNameAndNumber.push(i + 1 + ". " + katzDeliLine[i]);
   }
-  return `The line is currently: ${customerNameAndNumber.join(", ")}`;
+  return `The line is currently: ${customerNameAndNumber.join(', ')}`;
 }
