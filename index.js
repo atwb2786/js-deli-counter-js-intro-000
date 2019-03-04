@@ -14,14 +14,14 @@ function nowServing(katzDeliLine) {
   }
 }
 
-function currentLine(katzDeliLine) {
+function currentLine(line) {
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   }
 
   var customerNameAndNumber = [];
   for (var i = 0; i < katzDeliLine.length; i++) {
-    customerNameAndNumber.push(i + 1 + ". " + katzDeliLine[i]);
+    customerNameAndNumber.push(i + 1 + ". " + line[i]);
   }
   return `The line is currently: ${customerNameAndNumber.join(', ')}`;
 }
